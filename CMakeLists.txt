@@ -31,6 +31,7 @@ set(src_list
 
 if (WIN32)
 message(STATUS "target system: WIN32")
+link_libraries(ws2_32)
 endif()
 
 if (MSVC)
