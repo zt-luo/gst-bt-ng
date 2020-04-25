@@ -50,6 +50,12 @@ plugin_init (GstPlugin * plugin)
   return TRUE;
 }
 
+#ifndef PACKAGE
+#define PACKAGE "gst-bt"
+#define VERSION "0.0.1"
+#define PACKAGE_NAME "gst-bt"
+#endif
+
 /* this is the structure that gstreamer looks for to register plugins
  */
 GST_PLUGIN_DEFINE (GST_VERSION_MAJOR, GST_VERSION_MINOR,
