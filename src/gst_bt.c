@@ -25,27 +25,25 @@
 #include "gst_bt_demux.hpp"
 #include "gst_bt_type.h"
 
-#define PLUGIN_NAME bt
-
-GST_DEBUG_CATEGORY (gst_bt_demux_debug);
-GST_DEBUG_CATEGORY (gst_bt_src_debug);
+GST_DEBUG_CATEGORY(gst_bt_demux_debug);
+GST_DEBUG_CATEGORY(gst_bt_src_debug);
 
 static gboolean
-plugin_init (GstPlugin * plugin)
+plugin_init(GstPlugin *plugin)
 {
   /* first register the debug categories */
-  GST_DEBUG_CATEGORY_INIT (gst_bt_demux_debug, "btdemux", 0, "BitTorrent demuxer");
-  GST_DEBUG_CATEGORY_INIT (gst_bt_src_debug, "btsrc", 0, "BitTorrent source");
+  GST_DEBUG_CATEGORY_INIT(gst_bt_demux_debug, "btdemux", 0, "BitTorrent demuxer");
+  GST_DEBUG_CATEGORY_INIT(gst_bt_src_debug, "btsrc", 0, "BitTorrent source");
 
-  if (!gst_element_register (plugin, "btdemux",
-          GST_RANK_PRIMARY + 1, GST_TYPE_BT_DEMUX))
+  if (!gst_element_register(plugin, "btdemux",
+                            GST_RANK_PRIMARY + 1, GST_TYPE_BT_DEMUX))
     return FALSE;
 
-  if (!gst_element_register (plugin, "btsrc",
-          GST_RANK_PRIMARY + 1, GST_TYPE_BT_SRC))
+  if (!gst_element_register(plugin, "btsrc",
+                            GST_RANK_PRIMARY + 1, GST_TYPE_BT_SRC))
     return FALSE;
 
-  gst_bt_type_init (plugin);
+  gst_bt_type_init(plugin);
 
   return TRUE;
 }
@@ -58,8 +56,7 @@ plugin_init (GstPlugin * plugin)
 
 /* this is the structure that gstreamer looks for to register plugins
  */
-GST_PLUGIN_DEFINE (GST_VERSION_MAJOR, GST_VERSION_MINOR,
-    PLUGIN_NAME, "BitTorrent Plugin",
-    plugin_init, VERSION, "LGPL", PACKAGE_NAME,
-    "http://www.turran.org");
-
+GST_PLUGIN_DEFINE(GST_VERSION_MAJOR, GST_VERSION_MINOR,
+                  bt, "BitTorrent Plugin",
+                  plugin_init, VERSION, "LGPL", PACKAGE_NAME,
+                  "http://www.turran.org");

@@ -20,6 +20,6 @@
 #define GST_BT_TYPE_H
 
 gboolean
-gst_bt_type_init (GstPlugin * plugin);
+gst_bt_type_init(GstPlugin *plugin);
 
 #endif

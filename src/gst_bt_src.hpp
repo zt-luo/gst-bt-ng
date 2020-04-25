@@ -27,17 +27,17 @@
 
 G_BEGIN_DECLS
 
-#define GST_TYPE_BT_SRC            (gst_bt_src_get_type())
-#define GST_BT_SRC(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj),\
-                                         GST_TYPE_BT_SRC, GstBtSrc))
-#define GST_BT_SRC_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass),\
-                                         GST_TYPE_BT_SRC, GstBtSrcClass))
-#define GST_BT_SRC_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),\
-                                         GST_TYPE_BT_SRC, GstBtSrcClass))
-#define GST_IS_BT_SRC(obj)         (G_TYPE_CHECK_INSTANCE_TYPE((obj),\
-                                         GST_TYPE_BT_SRC))
-#define GST_IS_BT_SRC_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass),\
-                                         GST_TYPE_BT_SRC))
+#define GST_TYPE_BT_SRC (gst_bt_src_get_type())
+#define GST_BT_SRC(obj) (G_TYPE_CHECK_INSTANCE_CAST((obj), \
+                                                    GST_TYPE_BT_SRC, GstBtSrc))
+#define GST_BT_SRC_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), \
+                                                         GST_TYPE_BT_SRC, GstBtSrcClass))
+#define GST_BT_SRC_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS((obj), \
+                                                             GST_TYPE_BT_SRC, GstBtSrcClass))
+#define GST_IS_BT_SRC(obj) (G_TYPE_CHECK_INSTANCE_TYPE((obj), \
+                                                       GST_TYPE_BT_SRC))
+#define GST_IS_BT_SRC_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass), \
+                                                            GST_TYPE_BT_SRC))
 typedef struct _GstBtSrc
 {
   GstElement parent;
@@ -56,9 +56,8 @@ typedef struct _GstBtSrcClass
   GstElementClass parent_class;
 } GstBtSrcClass;
 
-GType gst_bt_src_get_type (void);
+GType gst_bt_src_get_type(void);
 
 G_END_DECLS
 
 #endif
-
