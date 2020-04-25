@@ -16,8 +16,7 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GST_BT_DEMUX_H
-#define GST_BT_DEMUX_H
+#pragma once
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -130,5 +129,3 @@ typedef struct _GstBtDemuxClass
 GType gst_bt_demux_get_type(void);
 
 G_END_DECLS
-
-#endif

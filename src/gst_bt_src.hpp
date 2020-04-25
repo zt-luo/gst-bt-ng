@@ -16,8 +16,7 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GST_BT_SRC_H
-#define GST_BT_SRC_H
+#pragma once
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -59,5 +58,3 @@ typedef struct _GstBtSrcClass
 GType gst_bt_src_get_type(void);
 
 G_END_DECLS
-
-#endif

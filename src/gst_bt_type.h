@@ -16,10 +16,7 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GST_BT_TYPE_H
-#define GST_BT_TYPE_H
+#pragma once
 
 gboolean
 gst_bt_type_init(GstPlugin *plugin);
-
-#endif

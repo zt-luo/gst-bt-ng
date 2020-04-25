@@ -16,8 +16,7 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GST_BT_H
-#define GST_BT_H
+#pragma once
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -26,5 +25,3 @@
 /* For compatibility */
 
 #define GST_FLOW_UNEXPECTED GST_FLOW_EOS
-
-#endif
