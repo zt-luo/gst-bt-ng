@@ -11,6 +11,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(PkgConfig REQUIRED)
 pkg_search_module(GST REQUIRED gstreamer-1.0)
+pkg_search_module(GST_BASE REQUIRED gstreamer-base-1.0)
 pkg_search_module(LIBTORRENT REQUIRED libtorrent-rasterbar)
 
 include_directories(
