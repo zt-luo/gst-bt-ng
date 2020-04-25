@@ -797,7 +797,7 @@ gst_bt_demux_sink_event (GstPad * pad, GstObject * object,
     libtorrent::session *session;
     libtorrent::add_torrent_params tp;
 
-    tp.ti = boost::shared_ptr<libtorrent::torrent_info>(torrent_info);
+    tp.ti = std::shared_ptr<libtorrent::torrent_info>(torrent_info);
     tp.save_path = btdemux->temp_location;
 
     session = (libtorrent::session *)btdemux->session;
@@ -1246,7 +1246,7 @@ gst_bt_demux_handle_alert (GstBtDemux * btdemux, const libtorrent::alert * a)
           }
 
           /* download the next piece */
-          gst_bt_demux_stream_add_piece (stream, h, p->piece_index + 1,
+          gst_bt_demux_stream_add_piece (stream, h, (int)p->piece_index + 1,
               btdemux->buffer_pieces);
 
           GST_BT_DEMUX_STREAM_UNLOCK(stream);
