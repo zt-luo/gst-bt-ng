@@ -1,4 +1,3 @@
-This code repo is imported from [tbeloqui](https://github.com/tbeloqui)'s [gst-bt fork](https://github.com/tbeloqui/gst-bt), the original code repo is [turran](https://github.com/turran)'s [gst-bt](https://github.com/turran/gst-bt) repo.
 
 What is it?
 ===========
